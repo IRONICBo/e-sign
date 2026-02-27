@@ -1,34 +1,34 @@
 # ✍️ Handwritten Signature and Watermark Tool
 
-一个功能强大的在线手写签名和水印工具，支持自定义签名、添加水印、导出图片等功能。
+A powerful online handwritten signature and watermark tool that supports custom signatures, watermark addition, and image export.
 
-## 🌟 功能特点
+## 🌟 Features
 
-- ✍️ **手写签名** - 支持鼠标和触摸屏绘制签名
-- 💧 **自定义水印** - 可自定义水印文字、颜色、大小和透明度
-- 🎨 **画笔设置** - 自由调整画笔颜色和粗细
-- 💾 **图片导出** - 支持预览和下载签名图片
-- 📱 **响应式设计** - 完美支持移动端和桌面端
-- 🎯 **零依赖** - 仅使用 html2canvas 库，无需复杂配置
+- ✍️ **Handwritten Signature** - Support mouse and touch screen drawing
+- 💧 **Custom Watermark** - Customize watermark text, color, size, and opacity
+- 🎨 **Brush Settings** - Freely adjust brush color and width
+- 💾 **Image Export** - Support preview and download signature images
+- 📱 **Responsive Design** - Perfect support for mobile and desktop
+- 🎯 **Zero Dependencies** - Only uses html2canvas library, no complex configuration
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 在线访问
+### Online Access
 
-访问 GitHub Pages 部署的在线版本：
+Visit the deployed version on GitHub Pages:
 ```
-https://[your-username].github.io/e-sign/
+https://ironicbo.github.io/e-sign/
 ```
 
-### 本地使用
+### Local Usage
 
-1. 克隆项目
+1. Clone the repository
 ```bash
-git clone https://github.com/[your-username]/e-sign.git
+git clone https://github.com/IRONICBo/e-sign.git
 cd e-sign
 ```
 
-2. 直接打开 HTML 文件
+2. Open the HTML file directly
 ```bash
 # macOS
 open index.html
@@ -40,109 +40,109 @@ xdg-open index.html
 start index.html
 ```
 
-或者使用本地服务器：
+Or use a local server:
 ```bash
-# 使用 Python
+# Using Python
 python -m http.server 8000
 
-# 使用 Node.js
+# Using Node.js
 npx http-server
 ```
 
-然后访问 `http://localhost:8000/`
+Then visit `http://localhost:8000/`
 
-## 📖 使用说明
+## 📖 Usage Guide
 
-### 基本操作
+### Basic Operations
 
-1. **绘制签名**
-   - 在画布上拖动鼠标或手指即可绘制
-   - 可调整画笔颜色和粗细
+1. **Draw Signature**
+   - Drag mouse or finger on the canvas to draw
+   - Adjust brush color and width as needed
 
-2. **添加水印**
-   - 点击"显示/隐藏水印"按钮
-   - 自定义水印文字、颜色、大小和透明度
-   - 调整水印行列间距
+2. **Add Watermark**
+   - Click "Show/Hide Watermark" button
+   - Customize watermark text, color, size, and opacity
+   - Adjust watermark row and column spacing
 
-3. **导出图片**
-   - 点击"保存为图片"预览最终效果
-   - 点击"下载图片"保存到本地
+3. **Export Image**
+   - Click "Save as Image" to preview the final result
+   - Click "Download Image" to save locally
 
-### 参数说明
+### Parameter Description
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| Pen Color | 画笔颜色 | 黑色 |
-| Pen Width | 画笔粗细 | 3px |
-| Watermark Text | 水印文字 | Confidential |
-| Watermark Opacity | 水印透明度 | 0.05 |
-| Watermark Size | 水印大小 | 60px |
-| Watermark Color | 水印颜色 | 黑色 |
-| Row Spacing | 行间距 | 3x |
-| Column Spacing | 列间距 | 3x |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Pen Color | Brush color | Black |
+| Pen Width | Brush width | 3px |
+| Watermark Text | Watermark text content | Confidential |
+| Watermark Opacity | Watermark transparency | 0.05 |
+| Watermark Size | Watermark font size | 60px |
+| Watermark Color | Watermark color | Black |
+| Row Spacing | Vertical spacing between watermarks | 3x |
+| Column Spacing | Horizontal spacing between watermarks | 3x |
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
-- HTML5 Canvas - 绘图功能
-- JavaScript (原生) - 交互逻辑
-- CSS3 - 样式和动画
-- [html2canvas](https://html2canvas.hertzen.com/) - 截图导出
+- HTML5 Canvas - Drawing functionality
+- JavaScript (Vanilla) - Interaction logic
+- CSS3 - Styling and animations
+- [html2canvas](https://html2canvas.hertzen.com/) - Screenshot export
 
-## 📦 项目结构
+## 📦 Project Structure
 
 ```
 e-sign/
-├── index.html                  # 主页面（包含所有功能）
-├── README.md                   # 项目说明
+├── index.html                  # Main page (all functionality included)
+├── README.md                   # Project documentation
 └── .github/
     └── workflows/
-        └── deploy.yml          # GitHub Pages 自动部署配置
+        └── deploy.yml          # GitHub Pages auto-deploy configuration
 ```
 
-## 🚢 部署
+## 🚢 Deployment
 
 ### GitHub Pages
 
-项目已配置自动部署到 GitHub Pages，每次推送到 main 分支时会自动部署。
+The project is configured for automatic deployment to GitHub Pages. It will auto-deploy whenever you push to the main branch.
 
-手动部署步骤：
-1. Fork 或克隆此项目
-2. 在 GitHub 项目设置中启用 GitHub Pages
-3. 选择 `gh-pages` 分支作为源
-4. 推送代码到 main 分支，GitHub Actions 会自动部署
+Manual deployment steps:
+1. Fork or clone this repository
+2. Enable GitHub Pages in repository settings
+3. Select **GitHub Actions** as the source
+4. Push code to main branch, GitHub Actions will auto-deploy
 
-### 其他平台
+### Other Platforms
 
-- **Vercel**: 导入 GitHub 仓库即可一键部署
-- **Netlify**: 拖拽项目文件夹即可部署
-- **Cloudflare Pages**: 连接 GitHub 仓库自动部署
+- **Vercel**: Import GitHub repository for one-click deployment
+- **Netlify**: Drag and drop project folder for deployment
+- **Cloudflare Pages**: Connect GitHub repository for auto-deployment
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交 Issue 和 Pull Request！
+Issues and Pull Requests are welcome!
 
-1. Fork 本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 许可证
+## 📝 License
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## 🙏 致谢
+## 🙏 Acknowledgments
 
-- [html2canvas](https://html2canvas.hertzen.com/) - 强大的 HTML 转图片库
-- 所有贡献者和使用者
+- [html2canvas](https://html2canvas.hertzen.com/) - Powerful HTML to image library
+- All contributors and users
 
-## 📞 联系方式
+## 📞 Contact
 
-如有问题或建议，欢迎通过以下方式联系：
+If you have any questions or suggestions, feel free to contact:
 
-- 提交 [Issue](https://github.com/[your-username]/e-sign/issues)
-- 发送邮件至 [your-email@example.com]
+- Submit an [Issue](https://github.com/IRONICBo/e-sign/issues)
+- Email: [your-email@example.com]
 
 ---
 
-⭐ 如果这个项目对你有帮助，欢迎给个 
+⭐ If this project helps you, please give it a star!
