@@ -333,21 +333,41 @@
             fileInput.click();
         });
 
-        // Drag and drop
-        uploadArea.addEventListener('dragover', function(e) {
+        // Prevent browser default drag behavior (opening the file)
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('drop', function(e) {
+            e.preventDefault();
+        });
+
+        // Drag and drop - listen on the whole container so it works after image is loaded
+        var containerEl = document.querySelector('.container');
+
+        containerEl.addEventListener('dragenter', function(e) {
             e.preventDefault();
             uploadArea.style.borderColor = '#38d9a9';
             uploadArea.style.background = '#e6fcf5';
         });
 
-        uploadArea.addEventListener('dragleave', function(e) {
+        containerEl.addEventListener('dragover', function(e) {
             e.preventDefault();
-            uploadArea.style.borderColor = '#43e97b';
-            uploadArea.style.background = '#f8fff8';
+            e.dataTransfer.dropEffect = 'copy';
+            uploadArea.style.borderColor = '#38d9a9';
+            uploadArea.style.background = '#e6fcf5';
         });
 
-        uploadArea.addEventListener('drop', function(e) {
+        containerEl.addEventListener('dragleave', function(e) {
+            // Only reset style when leaving the container (not its children)
+            if (!containerEl.contains(e.relatedTarget)) {
+                uploadArea.style.borderColor = '#43e97b';
+                uploadArea.style.background = '#f8fff8';
+            }
+        });
+
+        containerEl.addEventListener('drop', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             uploadArea.style.borderColor = '#43e97b';
             uploadArea.style.background = '#f8fff8';
             var files = e.dataTransfer.files;
