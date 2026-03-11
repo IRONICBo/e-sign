@@ -34,7 +34,6 @@
         h1 {
             text-align: center;
             color: #333;
-            margin-bottom: 30px;
             font-size: 28px;
         }
 
@@ -96,7 +95,7 @@
         }
 
         .control-group input[type="text"],
-        .control-group input[ty"color"],
+        .control-group input[type="color"],
         .control-group input[type="range"] {
             width: 100%;
             padding: 8px;
@@ -224,7 +223,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>✍️ Handwritten Signature and Watermark Tool</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <h1 style="margin-bottom: 0;">✍️ Handwritten Signature and Watermark Tool</h1>
+            <a href="watermark.html" style="text-decoration: none; color: white; font-weight: bold; font-size: 16px; padding: 10px 20px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 8px; transition: all 0.3s; white-space: nowrap;">🖼️ Image Watermark →</a>
+        </div>
         
         <div class="canvas-container" id="canvasContainer">
             <canvas id="signatureCanvas"></canvas>
